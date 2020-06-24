@@ -1,16 +1,17 @@
-This code can be used to create and object which automatically conducts a logistic regression analysis
+This code can be used to create an object which automatically conducts a logistic regression analysis
 for a given set of data. It can be useful to automate it in this way if one wishes to do this for multiple
-dataset. For example, classying a structure into 'healthy' or damaged for many different damages or nacelle
+dataset. For example, classifying a structure into 'healthy' or 'damaged' for many different damages or nacelle
 directions.
 
 Straight forward to use and I think quite generally applicable provided the dataset is a dataframe object
 and the classes being predicted are in the form of 0 or 1.
 
 The code does the following things:	
-	• Calculate Information Value for each variable
+	• Calculate Information Value (IV) for each variable
 	• Train a logistic regression model with each of n top IV variable and calculate the accuracy
-	• Automate detection of the ideal number of variables. This can be done possibly with a second order difference method of the n/accuracy curve.
-	• Conduct an iterative remove of variables based on p-value
+	• Automate selection of the ideal number of variables. 
+	• Conduct an iterative removal of variables based on p-value
+	• Fits the final, optimized modal for prediction
 Also contains functions to:
 	• Return ideal variables list in order of descending IV
 	• Return model details (summary of model)
